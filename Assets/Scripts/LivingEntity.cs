@@ -25,7 +25,7 @@ public class LivingEntity : MonoBehaviour, IDamageable
     protected virtual void OnEnable()
     {
         dead = false;
-        health = startingHealth;
+        health = startingHealth; 
     }
 
     public virtual bool ApplyDamage(DamageMessage damageMessage)
