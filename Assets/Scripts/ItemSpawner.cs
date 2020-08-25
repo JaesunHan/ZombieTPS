@@ -16,16 +16,28 @@ public class ItemSpawner : MonoBehaviour
 
     private void Start()
     {
-
+        timeBetSpawn = Random.Range(timeBetSpawnMin, timeBetSpawnMax);
+        lastSpawnTime = 0f;
     }
 
     private void Update()
     {
-
+        if (Time.time >= lastSpawnTime + timeBetSpawn && null != playerTransform)
+        {
+            Spawn();
+            lastSpawnTime = Time.time;
+            timeBetSpawn = Random.Range(timeBetSpawnMin, timeBetSpawnMax);
+        }
     }
 
     private void Spawn()
     {
+        var spawnPosition = Utility.GetRandomPointOnNavMesh(playerTransform.position, maxDistance, NavMesh.AllAreas);
 
+        spawnPosition += Vector3.up * 0.5f;
+
+        var Item = Instantiate(items[Random.Range(0, items.Length)], spawnPosition, Quaternion.identity);
+
+        Destroy(Item, 5f);
     }
 }

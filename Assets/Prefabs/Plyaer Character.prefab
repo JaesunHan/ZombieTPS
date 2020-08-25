@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 5416112525221774456}
   - component: {fileID: 8296172668827361261}
   - component: {fileID: 8296172668827361262}
+  - component: {fileID: 897241266}
   m_Layer: 8
   m_Name: Plyaer Character
   m_TagString: Player
@@ -769,6 +770,20 @@ MonoBehaviour:
   startingHealth: 100
   deathClip: {fileID: 8300000, guid: f432291212a9c48ba829d8cf3f1a678c, type: 3}
   hitClip: {fileID: 8300000, guid: 48d89c9feb4d24625be3ef9ec3487be3, type: 3}
+--- !u!114 &897241266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037486631759650173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46536d91935cc452a9f552695ffec782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPickupClip: {fileID: 8300000, guid: 0107881485be049089ce7a8ca3ed5089, type: 3}
+  lifeRemains: 3
 --- !u!1 &4052678105825234262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,11 +1452,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
-    - target: {fileID: 7573107372154840278, guid: e0340c77c6f6e4b4abdcff780b356124,
-        type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7573107372154840279, guid: e0340c77c6f6e4b4abdcff780b356124,
         type: 3}
       propertyPath: muzzleFlashEffect
@@ -1457,11 +1467,6 @@ PrefabInstance:
       propertyPath: targetToFollow
       value: 
       objectReference: {fileID: 701350854}
-    - target: {fileID: 7573107372154840281, guid: e0340c77c6f6e4b4abdcff780b356124,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0340c77c6f6e4b4abdcff780b356124, type: 3}
 --- !u!4 &2463733577352491364 stripped

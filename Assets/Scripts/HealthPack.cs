@@ -6,6 +6,12 @@ public class HealthPack : MonoBehaviour, IItem
 
     public void Use(GameObject target)
     {
+        var livingEntity = target.GetComponent<LivingEntity>();
+        if (null != livingEntity)
+        {
+            livingEntity.RestoreHealth(health);
+        }
 
+        Destroy(gameObject);
     }
 }
